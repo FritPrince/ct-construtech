@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title', $service->title . ' - CT ConstructTech')
+@section('title', $service->title . ' — CT ConstruTech')
+@section('meta_description', Str::limit(strip_tags($service->description ?? ''), 155, '...') ?: 'Service ' . $service->title . ' proposé par CT ConstruTech.')
+@section('og_title', $service->title . ' — CT ConstruTech')
+@section('canonical', route('services.show', $service))
 
 @section('styles')
 <style>
@@ -200,7 +203,7 @@
                             </div>
 
                             <h2 class="details-title">Notre approche</h2>
-                            <p>Chez CT ConstructTech, chaque projet est une opportunité de créer un espace unique qui reflète la personnalité et les besoins de nos clients. Notre équipe d'experts combine créativité, précision technique et matériaux de haute qualité pour garantir des résultats exceptionnels.</p>
+                            <p>Chez CT ConstruTech, chaque projet est une opportunité de créer un espace unique qui reflète la personnalité et les besoins de nos clients. Notre équipe d'experts combine créativité, précision technique et matériaux de haute qualité pour garantir des résultats exceptionnels.</p>
 
                             <h2 class="details-title">Nos engagements</h2>
                             <div class="service-details-list-wrap">
@@ -218,7 +221,7 @@
                                 </ul>
                             </div>
 
-                            <p class="mb-50">CT ConstructTech est engagé dans l'excellence — de la conception à la réalisation. Faites confiance à notre expertise pour transformer vos espaces en œuvres d'art habitables.</p>
+                            <p class="mb-50">CT ConstruTech est engagé dans l'excellence — de la conception à la réalisation. Faites confiance à notre expertise pour transformer vos espaces en œuvres d'art habitables.</p>
 
                             {{-- FAQ --}}
                             <div class="service-faq">

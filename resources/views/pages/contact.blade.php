@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Contact - CT ConstructTech')
+@section('title', 'Contactez-nous — CT ConstruTech')
+@section('meta_description', 'Contactez CT ConstruTech pour vos projets de construction, rénovation ou pour vous inscrire à une formation. Notre équipe vous répond rapidement.')
+@section('canonical', route('contact'))
 
 @section('content')
 

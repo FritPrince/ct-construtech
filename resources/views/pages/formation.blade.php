@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Formations - CT ConstructTech')
+@section('title', 'Formations Professionnelles — CT ConstruTech')
+@section('meta_description', 'Découvrez nos formations professionnelles en architecture, construction et BTP. Des programmes adaptés aux professionnels et aux particuliers.')
+@section('meta_keywords', 'formation architecture, formation BTP, formation construction, cours architecture, formation professionnelle')
+@section('canonical', route('formation'))
 
 @section('styles')
 <style>

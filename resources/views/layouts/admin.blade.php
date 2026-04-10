@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Admin') — CT ConstructTech</title>
+    <title>@yield('title', 'Admin') — CT ConstruTech</title>
 
     @php
         $adminLogo    = \App\Models\CompanySetting::get('logo');
@@ -272,7 +272,7 @@
                 <img src="{{ $adminLogoUrl }}" alt="logo" style="height:36px;width:auto;object-fit:contain">
                 @else
                 <div style="display:flex;flex-direction:column;line-height:1.1">
-                    <span class="brand-text">CT ConstructTech</span>
+                    <span class="brand-text">CT ConstruTech</span>
                     <span class="brand-sub">Administration</span>
                 </div>
                 @endif
@@ -442,7 +442,7 @@
 
             <footer class="footer">
                 <div class="d-sm-flex justify-content-between">
-                    <span class="text-muted">© {{ date('Y') }} CT ConstructTech — Administration</span>
+                    <span class="text-muted">© {{ date('Y') }} CT ConstruTech — Administration</span>
                     <span class="text-muted d-none d-sm-inline">Géré avec <i class="mdi mdi-heart text-danger ms-1"></i></span>
                 </div>
             </footer>

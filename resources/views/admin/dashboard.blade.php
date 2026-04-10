@@ -10,7 +10,7 @@
             <div class="col-12 col-xl-8 mb-4 mb-xl-0">
                 <h3 class="font-weight-bold">Bonjour, {{ auth()->user()->name ?? 'Admin' }}</h3>
                 <h6 class="font-weight-normal mb-0 text-muted">
-                    Bienvenue dans l'administration de CT ConstructTech.
+                    Bienvenue dans l'administration de CT ConstruTech.
                     @if($stats['unread'] > 0)
                         Vous avez <span class="text-primary">{{ $stats['unread'] }} message{{ $stats['unread'] > 1 ? 's' : '' }} non lu{{ $stats['unread'] > 1 ? 's' : '' }}.</span>
                     @else

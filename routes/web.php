@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\FormationController as AdminFormationController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\ContactMessageController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 // ── Site public ──────────────────────────────────────────────
@@ -23,6 +24,9 @@ Route::get('/portfolio/{project}', [PortfolioController::class, 'show'])->name('
 Route::get('/formation', [FormationController::class, 'index'])->name('formation');
 Route::get('/contact',   [ContactController::class,   'index'])->name('contact');
 Route::post('/contact',  [ContactController::class,   'send'])->name('contact.send');
+
+// ── Sitemap ───────────────────────────────────────────────────
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 // ── Newsletter ────────────────────────────────────────────────
 Route::post('/newsletter', [App\Http\Controllers\NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');

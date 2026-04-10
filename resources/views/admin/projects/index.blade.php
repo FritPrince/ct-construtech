@@ -7,7 +7,7 @@
 <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px">
     <div>
         <h1 class="ct-page-title">Portfolio / Projets</h1>
-        <p class="ct-page-subtitle">Gérez les projets réalisés par CT ConstructTech</p>
+        <p class="ct-page-subtitle">Gérez les projets réalisés par CT ConstruTech</p>
     </div>
     <a href="{{ route('admin.projects.create') }}" class="btn-ct-primary">
         <i class="fa-regular fa-plus"></i> Nouveau projet

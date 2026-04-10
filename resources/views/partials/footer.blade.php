@@ -13,7 +13,7 @@
         $fTwitter  = $fcs['twitter_url']   ?? '#';
         $fYoutube  = $fcs['youtube_url']   ?? null;
         $fAbout    = $fcs['about_text']    ?? 'Nous transformons votre vision en espaces magnifiquement conçus.';
-        $fName     = $fcs['company_name']  ?? 'CT ConstructTech';
+        $fName     = $fcs['company_name']  ?? 'CT ConstruTech';
     @endphp
     <div class="footer-bg" data-background="{{ asset('storage/template/assets/img/bg-img/footer-bg.png') }}"></div>
     <div class="footer-shade"></div>

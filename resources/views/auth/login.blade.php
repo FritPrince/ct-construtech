@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connexion — CT ConstructTech</title>
+    <title>Connexion — CT ConstruTech</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('storage/template/assets/img/favicon.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -497,7 +497,7 @@
         <div class="login-logo">
             <div class="logo-mark">CT</div>
             <div class="logo-text">
-                <span class="logo-name">CT ConstructTech</span>
+                <span class="logo-name">CT ConstruTech</span>
                 <span class="logo-sub">Administration</span>
             </div>
         </div>

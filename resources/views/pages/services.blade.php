@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Services - CT ConstructTech')
+@section('title', 'Nos Services — CT ConstruTech')
+@section('meta_description', 'CT ConstruTech vous propose des services complets en architecture, construction, rénovation et design d\'intérieur. Expertise et qualité garanties.')
+@section('meta_keywords', 'services architecture, construction bâtiment, rénovation maison, design intérieur, maîtrise d\'œuvre')
+@section('canonical', route('services'))
 
 @section('content')
 
@@ -110,7 +113,7 @@
         <!-- ./ banner-process-area -->
 
         <section class="skill-section skill-inner bg-grey pt-130 pb-130 overflow-hidden">
-            <div class="skill-text">CT ConstructTech</div>
+            <div class="skill-text">CT ConstruTech</div>
             <div class="shape-1"><img src="{{ asset('storage/template/assets/img/shapes/skill-shape-1.png') }}" alt="shape"></div>
             <div class="container container-2">
                 <div class="row section-heading-wrap">

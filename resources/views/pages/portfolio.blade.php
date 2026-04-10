@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Portfolio - CT ConstructTech')
+@section('title', 'Nos Projets — CT ConstruTech')
+@section('meta_description', 'Explorez nos réalisations en architecture et construction. Projets résidentiels, commerciaux et industriels conçus par CT ConstruTech.')
+@section('meta_keywords', 'projets architecture, réalisations construction, portfolio architecte, projets BTP')
+@section('canonical', route('portfolio'))
 
 @section('content')
 

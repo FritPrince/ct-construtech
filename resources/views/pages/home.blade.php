@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Accueil - CT ConstructTech')
+@section('title', 'CT ConstruTech — Cabinet d\'Architecture & Construction')
+@section('meta_description', 'CT ConstruTech, cabinet d\'architecture spécialisé en construction, rénovation et design d\'espaces. Découvrez nos projets, services et formations professionnelles.')
+@section('meta_keywords', 'cabinet architecture, construction, rénovation, BTP, design intérieur, formation architecture')
+@section('og_title', 'CT ConstruTech — Cabinet d\'Architecture & Construction')
+@section('og_description', 'Cabinet d\'architecture spécialisé en construction, rénovation et design d\'espaces. Projets, services et formations professionnelles.')
+@section('canonical', route('home'))
 
 @section('content')
 
@@ -98,7 +103,7 @@
 
         <section class="about-section overflow-hidden">
             <div class="about-bg" data-background="{{ asset('storage/template/assets/img/bg-img/about-bg.png') }}"></div>
-            <div class="about-text"><span>CT ConstructTech</span></div>
+            <div class="about-text"><span>CT ConstruTech</span></div>
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -177,7 +182,7 @@
         <!-- ./ feature-section -->
 
         <section class="counter-section counter-1">
-            <div class="counter-text"><span>CT ConstructTech</span></div>
+            <div class="counter-text"><span>CT ConstruTech</span></div>
             <div class="counter-element scroll-area"><img class="scroll-img" src="{{ asset('storage/template/assets/img/images/counter-img-1.png') }}" alt="counter"></div>
             <div class="container container-2">
                 <div class="row gy-5 fade-wrapper">

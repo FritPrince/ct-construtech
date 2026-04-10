@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
-@section('title', $project->title . ' - CT ConstructTech')
+@section('title', $project->title . ' — CT ConstruTech')
+@section('meta_description', Str::limit(strip_tags($project->description ?? ''), 155, '...') ?: 'Découvrez ce projet de ' . $project->title . ' réalisé par CT ConstruTech.')
+@section('og_title', $project->title . ' — CT ConstruTech')
+@section('og_description', Str::limit(strip_tags($project->description ?? ''), 155, '...'))
+@if($project->featured_image)
+@section('og_image', asset('storage/' . $project->featured_image))
+@endif
+@section('canonical', route('portfolio.show', $project))
 
 @section('styles')
 <style>
@@ -176,7 +183,7 @@
                     </div>
 
                     <h3 class="details-title-2">Un résultat exceptionnel</h3>
-                    <p>CT ConstructTech s'engage dans chaque projet avec une exigence d'excellence. De la conception initiale à la livraison finale, nous veillons à ce que chaque détail soit maîtrisé pour offrir un espace qui surpasse les attentes du client. La satisfaction de nos clients est notre plus grande récompense.</p>
+                    <p>CT ConstruTech s'engage dans chaque projet avec une exigence d'excellence. De la conception initiale à la livraison finale, nous veillons à ce que chaque détail soit maîtrisé pour offrir un espace qui surpasse les attentes du client. La satisfaction de nos clients est notre plus grande récompense.</p>
 
                     {{-- Autres projets --}}
                     @if($otherProjects->count())
