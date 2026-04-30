@@ -356,6 +356,13 @@
                     <span class="nav-link" style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#aaa;cursor:default;padding-bottom:4px">Contenu</span>
                 </li>
 
+                <li class="nav-item" data-active="{{ request()->routeIs('admin.sliders.*') ? 'true' : 'false' }}">
+                    <a class="nav-link" href="{{ route('admin.sliders.index') }}">
+                        <i class="mdi mdi-image-outline menu-icon"></i>
+                        <span class="menu-title">Sliders</span>
+                    </a>
+                </li>
+
                 <li class="nav-item" data-active="{{ request()->routeIs('admin.services.*') ? 'true' : 'false' }}">
                     <a class="nav-link" href="{{ route('admin.services.index') }}">
                         <i class="mdi mdi-briefcase-outline menu-icon"></i>

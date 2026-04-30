@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\FormationController as AdminFormationController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\ContactMessageController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,9 @@ Route::post('/logout',[App\Http\Controllers\Auth\LoginController::class, 'logout
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
 
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Sliders
+    Route::resource('sliders', AdminSliderController::class)->except(['show']);
 
     // Services
     Route::resource('services',    AdminServiceController::class);

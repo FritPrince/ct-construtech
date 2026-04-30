@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Nos Projets — CT ConstruTech')
-@section('meta_description', 'Explorez nos réalisations en architecture et construction. Projets résidentiels, commerciaux et industriels conçus par CT ConstruTech.')
-@section('meta_keywords', 'projets architecture, réalisations construction, portfolio architecte, projets BTP')
+@section('meta_description', 'Découvrez les réalisations de CT ConstruTech : projets de construction résidentiels, commerciaux et industriels menés de la conception jusqu\'au chantier.')
+@section('meta_keywords', 'réalisations construction, projets architecture ingénierie, chantiers BTP, maîtrise d\'œuvre')
 @section('canonical', route('portfolio'))
 
 @section('content')

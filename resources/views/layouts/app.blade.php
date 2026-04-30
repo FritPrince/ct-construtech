@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="@yield('meta_description', 'CT ConstruTech — Cabinet d\'architecture spécialisé en construction, rénovation et formation professionnelle.')">
-    <meta name="keywords" content="@yield('meta_keywords', 'architecture, construction, rénovation, formation, BTP, cabinet architecture')">
+    <meta name="description" content="@yield('meta_description', 'CT ConstruTech est un cabinet d\'architecture et d\'ingénierie qui accompagne ses clients dans la conception et la réalisation de leurs projets de construction.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'cabinet architecture ingénierie, bureau d\'études, construction, chantier, BTP, maîtrise d\'œuvre')">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="@yield('canonical', url()->current())">
 
@@ -13,7 +13,7 @@
     <meta property="og:type"        content="website">
     <meta property="og:site_name"   content="CT ConstruTech">
     <meta property="og:title"       content="@yield('og_title', 'CT ConstruTech')">
-    <meta property="og:description" content="@yield('og_description', 'Cabinet d\'architecture spécialisé en construction, rénovation et formation professionnelle.')">
+    <meta property="og:description" content="@yield('og_description', 'Cabinet d\'architecture et d\'ingénierie spécialisé dans la conception et la réalisation de projets de construction.')">
     <meta property="og:url"         content="{{ url()->current() }}">
     @hasSection('og_image')
         <meta property="og:image" content="@yield('og_image')">
@@ -22,7 +22,7 @@
     {{-- Twitter Card --}}
     <meta name="twitter:card"        content="summary_large_image">
     <meta name="twitter:title"       content="@yield('og_title', 'CT ConstruTech')">
-    <meta name="twitter:description" content="@yield('og_description', 'Cabinet d\'architecture spécialisé en construction, rénovation et formation professionnelle.')">
+    <meta name="twitter:description" content="@yield('og_description', 'Cabinet d\'architecture et d\'ingénierie spécialisé dans la conception et la réalisation de projets de construction.')">
 
     <title>@yield('title', 'CT ConstruTech')</title>
 
@@ -32,13 +32,10 @@
         $logoUrl   = ($siteLogo && \Illuminate\Support\Facades\Storage::disk('public')->exists($siteLogo))
                      ? asset("storage/{$siteLogo}")
                      : null;
-        $sitePhone    = $siteSettings['phone']         ?? null;
-        $siteEmail    = $siteSettings['email']         ?? null;
-        $siteAddress  = $siteSettings['address']       ?? null;
-        $siteFacebook = $siteSettings['facebook_url']  ?? '#';
-        $siteInsta    = $siteSettings['instagram_url'] ?? '#';
-        $siteTwitter  = $siteSettings['twitter_url']   ?? '#';
-        $siteYoutube  = $siteSettings['youtube_url']   ?? null;
+        $sitePhone    = $siteSettings['phone']          ?? null;
+        $siteEmail    = $siteSettings['email']          ?? null;
+        $siteAddress  = $siteSettings['address']        ?? null;
+        $siteLinkedin = $siteSettings['linkedin_url']   ?? null;
     @endphp
     <link rel="shortcut icon" type="image/x-icon" href="{{ $logoUrl ?? asset('storage/template/assets/img/favicon.png') }}">
 
@@ -129,8 +126,11 @@
         </button>
         <div class="side-menu-content">
             <div class="side-menu-logo">
-                <a class="dark-img" href="{{ route('home') }}"><img src="{{ $logoUrl ?? asset('storage/template/assets/img/logo/logo-2.png') }}" alt="logo" style="{{ $logoUrl ? 'max-height:98px;width:auto' : '' }}"></a>
-                <a class="light-img" href="{{ route('home') }}"><img src="{{ $logoUrl ?? asset('storage/template/assets/img/logo/logo-1.png') }}" alt="logo" style="{{ $logoUrl ? 'max-height:98px;width:auto' : '' }}"></a>
+                @if($logoUrl)
+                <a href="{{ route('home') }}"><img src="{{ $logoUrl }}" alt="logo" style="max-height:98px;width:auto"></a>
+                @else
+                <a href="{{ route('home') }}" style="font-size:20px;font-weight:800;color:#fff;text-decoration:none">CT ConstruTech</a>
+                @endif
             </div>
             <div class="side-menu-wrap"></div>
             <div class="side-menu-about">
@@ -159,15 +159,12 @@
             <div class="side-menu-contact">
                 <ul class="side-menu-list">
                     @if($siteAddress)<li>{{ $siteAddress }}</li>@endif
-                    @if($sitePhone)<li><a href="tel:{{ $sitePhone }}">{{ $sitePhone }}</a></li>@endif
                     @if($siteEmail)<li><a class="mail" href="mailto:{{ $siteEmail }}">{{ $siteEmail }}</a></li>@endif
                 </ul>
             </div>
             <ul class="side-menu-social">
-                <li class="facebook"><a href="{{ $siteFacebook }}"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="instagram"><a href="{{ $siteInsta }}"><i class="fab fa-instagram"></i></a></li>
-                <li class="twitter"><a href="{{ $siteTwitter }}"><i class="fab fa-twitter"></i></a></li>
-                @if($siteYoutube)<li class="youtube"><a href="{{ $siteYoutube }}"><i class="fab fa-youtube"></i></a></li>@endif
+                @if($siteEmail)<li><a href="mailto:{{ $siteEmail }}"><i class="fas fa-envelope"></i></a></li>@endif
+                @if($siteLinkedin)<li class="linkedin"><a href="{{ $siteLinkedin }}"><i class="fab fa-linkedin-in"></i></a></li>@endif
             </ul>
         </div>
     </div>
@@ -177,7 +174,11 @@
     <div class="mobile-side-menu">
         <div class="side-menu-content">
             <div class="side-menu-head">
-                <a href="{{ route('home') }}"><img src="{{ $logoUrl ?? asset('storage/template/assets/img/logo/logo-2.png') }}" alt="logo" style="{{ $logoUrl ? 'max-height:40px;width:auto' : '' }}"></a>
+                @if($logoUrl)
+                <a href="{{ route('home') }}"><img src="{{ $logoUrl }}" alt="logo" style="max-height:40px;width:auto"></a>
+                @else
+                <a href="{{ route('home') }}" style="font-size:16px;font-weight:800;color:#fff;text-decoration:none">CT ConstruTech</a>
+                @endif
                 <button class="mobile-side-menu-close"><i class="fa-regular fa-xmark"></i></button>
             </div>
             <div class="side-menu-wrap"></div>
@@ -192,12 +193,6 @@
                         <p>{{ $siteAddress }}</p>
                     </li>
                     @endif
-                    @if($sitePhone)
-                    <li>
-                        <i class="fas fa-phone"></i>
-                        <a href="tel:{{ $sitePhone }}">{{ $sitePhone }}</a>
-                    </li>
-                    @endif
                     @if($siteEmail)
                     <li>
                         <i class="fas fa-envelope-open-text"></i>
@@ -207,10 +202,8 @@
                 </ul>
             </div>
             <ul class="side-menu-social">
-                <li class="facebook"><a href="{{ $siteFacebook }}"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="instagram"><a href="{{ $siteInsta }}"><i class="fab fa-instagram"></i></a></li>
-                <li class="twitter"><a href="{{ $siteTwitter }}"><i class="fab fa-twitter"></i></a></li>
-                @if($siteYoutube)<li class="youtube"><a href="{{ $siteYoutube }}"><i class="fab fa-youtube"></i></a></li>@endif
+                @if($siteEmail)<li><a href="mailto:{{ $siteEmail }}"><i class="fas fa-envelope"></i></a></li>@endif
+                @if($siteLinkedin)<li class="linkedin"><a href="{{ $siteLinkedin }}"><i class="fab fa-linkedin-in"></i></a></li>@endif
             </ul>
         </div>
     </div>

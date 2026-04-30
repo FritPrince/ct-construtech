@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'CT ConstruTech — Cabinet d\'Architecture & Construction')
-@section('meta_description', 'CT ConstruTech, cabinet d\'architecture spécialisé en construction, rénovation et design d\'espaces. Découvrez nos projets, services et formations professionnelles.')
-@section('meta_keywords', 'cabinet architecture, construction, rénovation, BTP, design intérieur, formation architecture')
-@section('og_title', 'CT ConstruTech — Cabinet d\'Architecture & Construction')
-@section('og_description', 'Cabinet d\'architecture spécialisé en construction, rénovation et design d\'espaces. Projets, services et formations professionnelles.')
+@section('title', 'CT ConstruTech - Cabinet d\'Architecture et d\'Ingénierie')
+@section('meta_description', 'CT ConstruTech est un cabinet d\'architecture et d\'ingénierie qui conçoit et pilote vos projets de construction. Découvrez nos réalisations, nos services et nos formations.')
+@section('meta_keywords', 'cabinet architecture ingénierie, bureau d\'études construction, maîtrise d\'œuvre, BTP, chantier, génie civil')
+@section('og_title', 'CT ConstruTech - Cabinet d\'Architecture et d\'Ingénierie')
+@section('og_description', 'Cabinet d\'architecture et d\'ingénierie spécialisé dans la conception et le pilotage de projets de construction.')
 @section('canonical', route('home'))
 
 @section('content')
@@ -42,9 +42,9 @@
                             </div>
                             <div class="slider-element-wrap" data-animation="antra-fadeInRight" data-delay="1300ms" data-duration="1300ms">
                                 <div class="slider-element">
-                                    <h3 class="element-title">260+</h3>
-                                    <span>Projets réussis <br> et en cours</span>
-                                    <p>Spécifications Techniques <br>Projet de Design <br>Visualisation 3D</p>
+                                    <h3 class="element-title">135</h3>
+                                    <span>projets réalisés</span>
+                                    <p>Études structurelles complètes <br>Suivi chantier &amp; contrôle qualité <br>BIM &amp; coordination technique</p>
                                 </div>
                                 <div class="slider-thumb">
                                     <img src="{{ asset('storage/template/assets/img/images/slider-thumb-1.png') }}" alt="slider">
@@ -65,13 +65,13 @@
                     <div class="shape"><img src="{{ asset('storage/template/assets/img/shapes/section-heading.png') }}" alt="shape"></div>
                     <div class="col-lg-4 col-md-12">
                         <div class="section-heading mb-0">
-                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">QUI NOUS SOMMES</h4>
+                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">QUI SOMMES-NOUS</h4>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <div class="section-heading section-heading-2 mb-0">
-                            <h2 class="section-title cursor-effect">Vivez <span>l'art du Design</span> Intérieur</h2>
-                            <p class="mb-0">Nous sommes spécialisés dans la transformation de visions en réalité. <br> Explorez notre portfolio de projets architecturaux et de design intérieur <br> créés avec précision.</p>
+                            <h2 class="section-title cursor-effect">Une expertise globale pour <span>concevoir et sécuriser</span> vos projets</h2>
+                            <p class="mb-0">ConstruTech est un cabinet spécialisé en architecture, ingénierie structurelle et gestion de projets de construction. Nous accompagnons nos clients à chaque étape, de la conception technique jusqu'au suivi de chantier, avec un objectif clair : garantir des ouvrages fiables, maîtrisés et durables.</p>
                         </div>
                     </div>
                 </div>
@@ -109,16 +109,15 @@
                     <div class="col-lg-6">
                         <div class="about-content white-content slide-anim" data-delay="0.3" data-offset="100" data-direction="left">
                             <div class="section-heading white-content mb-30">
-                                <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Notre Histoire</h4>
-                                <h2 class="section-title cursor-effect">Des Espaces <br> qui Inspirent, un <span>Design <br> qui Prend Vie</span></h2>
+                                <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Notre Différence</h4>
+                                <h2 class="section-title cursor-effect">Une approche complète, <span>au-delà des <br> simples plans</span></h2>
                             </div>
                             <ul class="about-list">
-                                <li><img src="{{ asset('storage/template/assets/img/icon/about-1.png') }}" alt="about">Technologies de pointe</li>
-                                <li><img src="{{ asset('storage/template/assets/img/icon/about-1.png') }}" alt="about">Designs Haute Qualité</li>
-                                <li><img src="{{ asset('storage/template/assets/img/icon/about-1.png') }}" alt="about">Garantie 5 ans</li>
-                                <li><img src="{{ asset('storage/template/assets/img/icon/about-1.png') }}" alt="about">Design Résidentiel</li>
+                                <li><img src="{{ asset('storage/template/assets/img/icon/about-1.png') }}" alt="about">Réduire les erreurs en phase chantier</li>
+                                <li><img src="{{ asset('storage/template/assets/img/icon/about-1.png') }}" alt="about">Améliorer la coordination entre intervenants</li>
+                                <li><img src="{{ asset('storage/template/assets/img/icon/about-1.png') }}" alt="about">Garantir la qualité finale de l'ouvrage</li>
                             </ul>
-                            <p>Que ce soit pour votre maison, bureau ou un projet commercial, nous sommes toujours dédiés à donner vie à votre vision.</p>
+                            <p>Contrairement aux approches classiques, nous ne nous limitons pas à concevoir des plans. Nous intervenons également sur les aspects techniques et opérationnels pour sécuriser l'ensemble du projet.</p>
                             <div class="about-btn">
                                 <a href="{{ route('services') }}" class="tl-primary-btn white-btn">En savoir plus <span class="icon"><i class="fa-regular fa-arrow-right"></i></span></a>
                             </div>
@@ -140,13 +139,13 @@
                     <div class="shape"><img src="{{ asset('storage/template/assets/img/shapes/section-heading.png') }}" alt="shape"></div>
                     <div class="col-lg-4 col-md-12">
                         <div class="section-heading mb-0">
-                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">QUI NOUS SOMMES</h4>
+                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">L'Équipe ConstruTech</h4>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <div class="section-heading section-heading-2 mb-0">
-                            <h2 class="section-title cursor-effect title-2">Explorez nos <span>services complets <br> de design</span> intérieur</h2>
-                            <p class="mb-0">Nous sommes spécialisés dans la transformation de visions en réalité. Explorez notre portfolio de projets architecturaux et de design intérieur créés avec précision.</p>
+                            <h2 class="section-title cursor-effect title-2">Une équipe <span>pluridisciplinaire</span> au service de votre projet</h2>
+                            <p class="mb-0">Derrière chaque projet, une équipe engagée composée d'architectes, d'ingénieurs structures et de techniciens BTP, tous qualifiés et expérimentés, travaille en synergie pour proposer des solutions adaptées à chaque contexte.</p>
                         </div>
                     </div>
                 </div>
@@ -207,11 +206,11 @@
             <div class="container container-2">
                 <div class="heading-space align-items-end">
                     <div class="section-heading mb-0">
-                        <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Notre Méthode</h4>
-                        <h2 class="section-title cursor-effect title-2">Notre <span>processus <br> architectural</span> pour des <br> résultats exceptionnels.</h2>
+                        <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Notre Processus</h4>
+                        <h2 class="section-title cursor-effect title-2">Un processus <span>structuré</span> pour maîtriser <br> chaque étape du projet</h2>
                     </div>
                     <div class="process-desc">
-                        <p class="mb-0">Notre processus est vivant - s'adaptant, s'affinant et grandissant <br> avec votre vision. Toujours. <br> Comme des artistes avec une toile vierge, nous transformons les pièces <br> en œuvres d'art vivantes.</p>
+                        <p class="mb-0">De l'analyse initiale au contrôle de l'exécution sur le terrain, chaque étape est pilotée avec rigueur pour garantir des ouvrages conformes, dans les délais et les budgets convenus.</p>
                     </div>
                 </div>
                 <div class="row gy-xl-0 gy-4 process-wrap fade-wrapper">
@@ -233,7 +232,7 @@
                     @endforeach
                 </div>
                 <div class="process-text">
-                    <h5 class="bottom-text">Nous travaillons dur pour vous impressionner. <a href="{{ route('contact') }}">Commencez dès aujourd'hui</a></h5>
+                    <h5 class="bottom-text">Prêt à démarrer votre projet ? <a href="{{ route('contact') }}">Contactez-nous dès aujourd'hui</a></h5>
                 </div>
             </div>
         </section>
@@ -241,7 +240,7 @@
 
         <section class="project-section pt-130 tl-bg-color fade-wrapper">
             <div class="bg-shape" data-background="{{ asset('storage/template/assets/img/shapes/project-shape-1.png') }}"></div>
-            <div class="project-text"><span>Intérieur</span></div>
+            <div class="project-text"><span>ConstruTech</span></div>
             <div class="container container-2">
                 <div class="row section-heading-wrap fade-top">
                     <div class="shape"><img src="{{ asset('storage/template/assets/img/shapes/section-heading.png') }}" alt="shape"></div>
@@ -252,8 +251,8 @@
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <div class="section-heading section-heading-2 mb-0">
-                            <h2 class="section-title cursor-effect title-2">Des projets <span>créatifs qui <br> définissent</span> notre style</h2>
-                            <p class="mb-0">Notre portfolio présente une gamme variée de projets, des espaces résidentiels magnifiquement conçus aux intérieurs commerciaux fonctionnels et élégants.</p>
+                            <h2 class="section-title cursor-effect title-2">Des projets <span>conçus, calculés <br> et réalisés</span> avec exigence</h2>
+                            <p class="mb-0">À travers nos réalisations, découvrez comment l'équipe ConstruTech accompagne chaque projet, de l'idée initiale jusqu'à sa concrétisation. Plans, études, maquettes et chantier : chaque réalisation témoigne de notre rigueur et de notre engagement.</p>
                         </div>
                     </div>
                 </div>

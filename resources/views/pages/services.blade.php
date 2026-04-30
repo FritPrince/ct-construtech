@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Nos Services — CT ConstruTech')
-@section('meta_description', 'CT ConstruTech vous propose des services complets en architecture, construction, rénovation et design d\'intérieur. Expertise et qualité garanties.')
-@section('meta_keywords', 'services architecture, construction bâtiment, rénovation maison, design intérieur, maîtrise d\'œuvre')
+@section('meta_description', 'CT ConstruTech vous propose des services en architecture et ingénierie : études techniques, maîtrise d\'œuvre, suivi de chantier et gestion de projets de construction.')
+@section('meta_keywords', 'services architecture ingénierie, maîtrise d\'œuvre, suivi chantier, études techniques, bureau d\'études BTP')
 @section('canonical', route('services'))
 
 @section('content')
@@ -25,13 +25,13 @@
                     <div class="shape"><img src="{{ asset('storage/template/assets/img/shapes/section-heading.png') }}" alt="shape"></div>
                     <div class="col-lg-4 col-md-12">
                         <div class="section-heading mb-0">
-                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">QUI NOUS SOMMES</h4>
+                            <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Nos Services</h4>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-12">
                         <div class="section-heading section-heading-2 mb-0">
-                            <h2 class="section-title title-2">Explorez nos <span>services complets <br> de design</span> intérieur</h2>
-                            <p class="mb-0">Nous sommes spécialisés dans la transformation de visions en réalité. Explorez notre portfolio de projets architecturaux <br> et de design intérieur <br> créés avec précision.</p>
+                            <h2 class="section-title title-2">Une expertise complète <span>en architecture <br> et ingénierie</span></h2>
+                            <p class="mb-0">De la conception technique au suivi de chantier, ConstruTech intervient à chaque étape de votre projet pour garantir des ouvrages fiables, maîtrisés et livrés dans les délais.</p>
                         </div>
                     </div>
                 </div>
@@ -75,29 +75,29 @@
                         <div class="swiper-slide elementor-banner-process-item">
                             <div class="banner-process-caption">
                                 <span class="number">01</span>
-                                <h3 class="banner-process-title"><a href="#">Rénovation et <br> réaménagement</a></h3>
-                                <div class="banner-process-content">Nous transformons vos espaces existants en les modernisant pour améliorer leur fonctionnalité et leur esthétique.</div>
+                                <h3 class="banner-process-title"><a href="#">Études &amp; <br> conception architecturale</a></h3>
+                                <div class="banner-process-content">Élaboration des plans, études de faisabilité et conception technique adaptée aux contraintes du site et du programme.</div>
                             </div>
                         </div>
                         <div class="swiper-slide elementor-banner-process-item">
                             <div class="banner-process-caption">
                                 <span class="number">02</span>
-                                <h3 class="banner-process-title"><a href="#">Consultation <br> design personnalisé</a></h3>
-                                <div class="banner-process-content">Nous transformons vos espaces existants en les modernisant pour améliorer leur fonctionnalité et leur esthétique.</div>
+                                <h3 class="banner-process-title"><a href="#">Ingénierie <br> structurelle</a></h3>
+                                <div class="banner-process-content">Calculs de structure, dimensionnement des fondations et vérification de la résistance des ouvrages selon les normes en vigueur.</div>
                             </div>
                         </div>
                         <div class="swiper-slide elementor-banner-process-item">
                             <div class="banner-process-caption">
                                 <span class="number">03</span>
-                                <h3 class="banner-process-title"><a href="#">Planification <br> de l'espace</a></h3>
-                                <div class="banner-process-content">Nous transformons vos espaces existants en les modernisant pour améliorer leur fonctionnalité et leur esthétique.</div>
+                                <h3 class="banner-process-title"><a href="#">Maîtrise <br> d'œuvre</a></h3>
+                                <div class="banner-process-content">Coordination des intervenants, pilotage du planning et contrôle du respect du budget tout au long du projet.</div>
                             </div>
                         </div>
                         <div class="swiper-slide elementor-banner-process-item">
                             <div class="banner-process-caption">
                                 <span class="number">04</span>
-                                <h3 class="banner-process-title"><a href="#">Visualisation <br> 3D design</a></h3>
-                                <div class="banner-process-content">Nous transformons vos espaces existants en les modernisant pour améliorer leur fonctionnalité et leur esthétique.</div>
+                                <h3 class="banner-process-title"><a href="#">Suivi <br> de chantier</a></h3>
+                                <div class="banner-process-content">Contrôle de la conformité des travaux, vérification de la qualité d'exécution et validation des étapes clés jusqu'à la livraison.</div>
                             </div>
                         </div>
                     </div>
@@ -133,19 +133,11 @@
                     <div class="col-lg-5">
                         <div class="skill-left-content">
                             <div class="skill-desc">
-                                <p>Nous sommes spécialisés dans la transformation de visions en réalité. Explorez notre portfolio de projets architecturaux et de design intérieur créés avec précision.</p>
+                                <p>Nous combinons expertise structurelle, maîtrise d'œuvre et rigueur technique pour livrer des ouvrages conformes, durables et dans les délais convenus.</p>
                             </div>
                             <div class="skills-items">
                                 <div class="skills-item fade-top">
-                                    <h4 class="title">Design Intérieur</h4>
-                                    <div class="progress">
-                                        <div class="progress-bar wow slideInLeft" data-wow-delay="0ms" data-wow-duration="2000ms" role="progressbar" style="width: 85%;">
-                                            <span>85%</span><div class="dot"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="skills-item fade-top">
-                                    <h4 class="title">Modélisation 3D</h4>
+                                    <h4 class="title">Ingénierie structurelle</h4>
                                     <div class="progress">
                                         <div class="progress-bar wow slideInLeft" data-wow-delay="0ms" data-wow-duration="2000ms" role="progressbar" style="width: 95%;">
                                             <span>95%</span><div class="dot"></div>
@@ -153,10 +145,18 @@
                                     </div>
                                 </div>
                                 <div class="skills-item fade-top">
-                                    <h4 class="title">Planification 2D</h4>
+                                    <h4 class="title">Maîtrise d'œuvre</h4>
                                     <div class="progress">
-                                        <div class="progress-bar wow slideInLeft" data-wow-delay="0ms" data-wow-duration="2000ms" role="progressbar" style="width: 65%;">
-                                            <span>65%</span><div class="dot"></div>
+                                        <div class="progress-bar wow slideInLeft" data-wow-delay="0ms" data-wow-duration="2000ms" role="progressbar" style="width: 88%;">
+                                            <span>88%</span><div class="dot"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skills-item fade-top">
+                                    <h4 class="title">Suivi & contrôle de chantier</h4>
+                                    <div class="progress">
+                                        <div class="progress-bar wow slideInLeft" data-wow-delay="0ms" data-wow-duration="2000ms" role="progressbar" style="width: 90%;">
+                                            <span>90%</span><div class="dot"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -182,10 +182,11 @@
                         <h2 class="section-title">Rejoignez <span>notre newsletter <br> et restez</span> informé</h2>
                         <p>Rejoignez notre newsletter. Apprenez de nouvelles choses, accédez à du contenu exclusif, <br> et restez informé des dernières actualités du secteur.</p>
                     </div>
-                    <div class="newsletter-form">
-                        <input type="text" id="email" name="email" class="form-control" placeholder="Adresse email..">
+                    <form class="newsletter-form" action="{{ route('newsletter.subscribe') }}" method="POST">
+                        @csrf
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Adresse email.." required>
                         <button type="submit"><i class="fa-regular fa-arrow-right-long"></i></button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>

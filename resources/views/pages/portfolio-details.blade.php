@@ -85,7 +85,7 @@
                     <h4 class="sub-title">
                         <a class="home" href="{{ route('home') }}">Accueil</a>
                         <span class="icon">-</span>
-                        <a class="inner-page" href="{{ route('portfolio') }}">Portfolio</a>
+                        <a class="inner-page" href="{{ route('portfolio') }}">Projets</a>
                         <span class="icon">-</span>
                         <span>{{ $project->title }}</span>
                     </h4>
@@ -143,23 +143,23 @@
                         <img src="{{ $mainImg }}" alt="{{ $project->title }}">
                     </div>
 
-                    <h2 class="details-title-2">Conception en détail</h2>
+                    <h2 class="details-title-2">Détail du projet</h2>
 
                     @if($project->description)
                     <p>{{ $project->description }}</p>
                     @else
-                    <p>Chaque espace de ce projet a été pensé pour allier esthétique et fonctionnalité. Notre équipe a travaillé en étroite collaboration avec le client pour concevoir un environnement qui reflète ses besoins et sa personnalité, en s'appuyant sur des matériaux de qualité et une attention particulière aux détails.</p>
+                    <p>Ce projet a été conduit de la phase d'étude jusqu'au suivi de chantier. Notre équipe a travaillé en étroite collaboration avec le client pour concevoir un ouvrage structurellement solide, techniquement maîtrisé et livré dans les délais convenus.</p>
                     @endif
 
                     <div class="project-details-list">
                         <ul>
-                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Espaces ouverts :</strong> Création de zones de vie en open-plan pour améliorer la fluidité et la connexion entre les espaces intérieurs et extérieurs.</li>
-                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Matériaux naturels :</strong> Utilisation de bois recyclé, de pierre et de fibres naturelles pour une harmonie avec l'environnement.</li>
-                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Grandes baies vitrées :</strong> Installation de baies sol-plafond pour maximiser la lumière naturelle et les vues dégagées.</li>
+                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Études structurelles :</strong> Calculs de charge, dimensionnement des fondations et vérification de la résistance des structures.</li>
+                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Conception architecturale :</strong> Plans réglementaires, maquettes et coordination technique entre tous les corps de métier.</li>
+                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Suivi de chantier :</strong> Contrôle de la conformité des travaux, qualité d'exécution et respect du planning.</li>
                         </ul>
                         <ul>
-                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Espaces extérieurs :</strong> Conception de terrasses, piscines et jardins pour la détente et les loisirs.</li>
-                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Équipements modernes :</strong> Intégration de la domotique, appareils haut de gamme et équipements connectés.</li>
+                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Coordination des intervenants :</strong> Pilotage des entreprises, gestion des interfaces et prévention des conflits de planning.</li>
+                            <li><i class="fa-sharp fa-solid fa-circle-check"></i><strong>Maîtrise des coûts :</strong> Anticipation des contraintes en phase conception pour éviter les dérives budgétaires.</li>
                         </ul>
                     </div>
 
@@ -182,8 +182,8 @@
                         </div>
                     </div>
 
-                    <h3 class="details-title-2">Un résultat exceptionnel</h3>
-                    <p>CT ConstruTech s'engage dans chaque projet avec une exigence d'excellence. De la conception initiale à la livraison finale, nous veillons à ce que chaque détail soit maîtrisé pour offrir un espace qui surpasse les attentes du client. La satisfaction de nos clients est notre plus grande récompense.</p>
+                    <h3 class="details-title-2">Un ouvrage livré avec exigence</h3>
+                    <p>CT ConstruTech s'engage dans chaque projet avec une rigueur technique constante. De l'analyse initiale au contrôle final sur le terrain, nous veillons à ce que chaque ouvrage soit réalisé dans les règles de l'art, dans les délais convenus et à la hauteur des attentes du client.</p>
 
                     {{-- Autres projets --}}
                     @if($otherProjects->count())

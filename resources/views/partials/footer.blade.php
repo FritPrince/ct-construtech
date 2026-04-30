@@ -3,17 +3,13 @@
         $fcs      = \App\Models\CompanySetting::pluck('value', 'key');
         $fLogo    = $fcs['logo']          ?? null;
         $fLogoUrl = ($fLogo && \Illuminate\Support\Facades\Storage::disk('public')->exists($fLogo))
-                    ? asset('storage/' . $fLogo)
+                    ? asset("storage/{$fLogo}")
                     : null;
-        $fPhone    = $fcs['phone']         ?? null;
-        $fEmail    = $fcs['email']         ?? null;
-        $fAddress  = $fcs['address']       ?? null;
-        $fFacebook = $fcs['facebook_url']  ?? '#';
-        $fInsta    = $fcs['instagram_url'] ?? '#';
-        $fTwitter  = $fcs['twitter_url']   ?? '#';
-        $fYoutube  = $fcs['youtube_url']   ?? null;
-        $fAbout    = $fcs['about_text']    ?? 'Nous transformons votre vision en espaces magnifiquement conçus.';
-        $fName     = $fcs['company_name']  ?? 'CT ConstruTech';
+        $fEmail    = $fcs['email']          ?? null;
+        $fAddress  = $fcs['address']        ?? null;
+        $fLinkedin = $fcs['linkedin_url']   ?? null;
+        $fAbout    = $fcs['about_text']     ?? 'Nous transformons votre vision en espaces magnifiquement conçus.';
+        $fName     = $fcs['company_name']   ?? 'CT ConstruTech';
     @endphp
     <div class="footer-bg" data-background="{{ asset('storage/template/assets/img/bg-img/footer-bg.png') }}"></div>
     <div class="footer-shade"></div>
@@ -24,7 +20,11 @@
                     <div class="widget-header">
                         <div class="footer-logo">
                             <a href="{{ route('home') }}">
-                                <img src="{{ $fLogoUrl ?? asset('storage/template/assets/img/logo/logo-2.png') }}" alt="logo" @if($fLogoUrl) style="max-height:48px;width:auto" @endif>
+                                @if($fLogoUrl)
+                                <img src="{{ $fLogoUrl }}" alt="logo" style="max-height:48px;width:auto">
+                                @else
+                                <span style="font-size:18px;font-weight:800;color:#fff">CT ConstruTech</span>
+                                @endif
                             </a>
                         </div>
                     </div>
@@ -57,13 +57,10 @@
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget">
                     <div class="footer-address">
-                        @if($fPhone)<a class="number" href="tel:{{ $fPhone }}">{{ $fPhone }}</a>@endif
                         @if($fEmail)<a class="mail" href="mailto:{{ $fEmail }}">{{ $fEmail }}</a>@endif
                         <ul class="social-list">
-                            @if($fFacebook !== '#')<li><a href="{{ $fFacebook }}">Facebook</a></li>@endif
-                            @if($fInsta !== '#')<li><a href="{{ $fInsta }}">Instagram</a></li>@endif
-                            @if($fYoutube)<li><a href="{{ $fYoutube }}">YouTube</a></li>@endif
-                            @if($fTwitter !== '#')<li><a href="{{ $fTwitter }}">Twitter</a></li>@endif
+                            @if($fEmail)<li><a href="mailto:{{ $fEmail }}">Email</a></li>@endif
+                            @if($fLinkedin)<li><a href="{{ $fLinkedin }}">LinkedIn</a></li>@endif
                         </ul>
                     </div>
                 </div>

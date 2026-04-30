@@ -1,12 +1,6 @@
 @php
-    // Réutilise les variables définies dans app.blade.php si disponibles
-    $hPhone     = $sitePhone    ?? \App\Models\CompanySetting::get('phone');
-    $hEmail     = $siteEmail    ?? \App\Models\CompanySetting::get('email');
-    $hAddress   = $siteAddress  ?? \App\Models\CompanySetting::get('address');
-    $hFacebook  = $siteFacebook ?? (\App\Models\CompanySetting::get('facebook_url')  ?? '#');
-    $hInstagram = $siteInsta    ?? (\App\Models\CompanySetting::get('instagram_url') ?? '#');
-    $hTwitter   = $siteTwitter  ?? (\App\Models\CompanySetting::get('twitter_url')   ?? '#');
-    $hYoutube   = $siteYoutube  ?? \App\Models\CompanySetting::get('youtube_url');
+    $hEmail    = $siteEmail    ?? \App\Models\CompanySetting::get('email');
+    $hLinkedin = $siteLinkedin ?? \App\Models\CompanySetting::get('linkedin_url');
 @endphp
 <!-- header-area-start -->
 <header class="header sticky-active">
@@ -19,7 +13,7 @@
                             @isset($logoUrl)
                             <img src="{{ $logoUrl }}" alt="logo" style="max-height:98px;width:auto">
                             @else
-                            <img src="{{ asset('storage/template/assets/img/logo/logo-2.png') }}" alt="logo">
+                            <span style="font-size:18px;font-weight:800;color:#fff">CT ConstruTech</span>
                             @endisset
                         </a>
                     </div>
@@ -47,15 +41,6 @@
                     <!-- /.header-menu-wrap -->
                 </div>
                 <div class="header-right-wrap">
-                    @if($hPhone)
-                    <a href="tel:{{ $hPhone }}" class="header-contact">
-                        <span class="icon"><i class="fa-regular fa-phone"></i></span>
-                        <span class="content">
-                            <span class="call-text">Appelez-nous</span>
-                            <span class="call-number">{{ $hPhone }}</span>
-                        </span>
-                    </a>
-                    @endif
                     <div class="header-btn-wrap">
                         <a href="{{ route('contact') }}" class="tl-primary-btn header-btn">Nous contacter</a>
                     </div>
@@ -82,16 +67,6 @@
                             </svg>
                         </span>
                     </button>
-                    <div class="sidebar-icon">
-                        <button class="sidebar-trigger open">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M11 2C11 0.89543 11.8954 0 13 0H14C15.1046 0 16 0.895431 16 2V3C16 4.10457 15.1046 5 14 5H13C11.8954 5 11 4.10457 11 3V2Z" fill="white"/>
-                                <path d="M0 2C0 0.89543 0.895431 0 2 0H3C4.10457 0 5 0.895431 5 2V3C5 4.10457 4.10457 5 3 5H2C0.89543 5 0 4.10457 0 3V2Z" fill="white"/>
-                                <path d="M0 13C0 11.8954 0.895431 11 2 11H3C4.10457 11 5 11.8954 5 13V14C5 15.1046 4.10457 16 3 16H2C0.89543 16 0 15.1046 0 14V13Z" fill="white"/>
-                                <path d="M11 13C11 11.8954 11.8954 11 13 11H14C15.1046 11 16 11.8954 16 13V14C16 15.1046 15.1046 16 14 16H13C11.8954 16 11 15.1046 11 14V13Z" fill="white"/>
-                            </svg>
-                        </button>
-                    </div>
                     <!-- /.header-right -->
                 </div>
             </div>

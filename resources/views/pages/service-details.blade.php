@@ -120,14 +120,11 @@
 
                             <div class="service-details-cta">
                                 <div class="cta-bg" data-background="{{ asset('storage/template/assets/img/bg-img/service-cta-bg-2.png') }}"></div>
-                                <div class="icon">
-                                    <img src="{{ asset('storage/template/assets/img/icon/service-details-cta.png') }}" alt="icon">
+                                <div class="icon" style="display:flex;align-items:center;justify-content:center;width:60px;height:60px;background:rgba(253,1,0,0.12);border-radius:50%;margin:0 auto 12px">
+                                    <i class="fa-regular fa-headset" style="font-size:26px;color:#fd0100"></i>
                                 </div>
                                 <span>Besoin d'aide ?</span>
                                 @php $settings = \App\Models\CompanySetting::pluck('value','key'); @endphp
-                                @if(!empty($settings['phone']))
-                                <a class="number" href="tel:{{ $settings['phone'] }}">{{ $settings['phone'] }}</a>
-                                @endif
                                 @if(!empty($settings['email']))
                                 <a class="mail" href="mailto:{{ $settings['email'] }}">{{ $settings['email'] }}</a>
                                 @endif
@@ -166,29 +163,29 @@
                                 <div class="service-details-item">
                                     <div class="icon"><img src="{{ asset('storage/template/assets/img/icon/service-details-1.png') }}" alt="service"></div>
                                     <div class="content">
-                                        <h3 class="title">Optimisation de l'espace</h3>
-                                        <p>Maximiser chaque mètre carré grâce à une planification intelligente.</p>
+                                        <h3 class="title">Études techniques</h3>
+                                        <p>Analyses structurelles, calculs de charge et dimensionnement des ouvrages.</p>
                                     </div>
                                 </div>
                                 <div class="service-details-item">
                                     <div class="icon"><img src="{{ asset('storage/template/assets/img/icon/service-details-2.png') }}" alt="service"></div>
                                     <div class="content">
-                                        <h3 class="title">Aménagements flexibles</h3>
-                                        <p>Des layouts adaptables à vos besoins présents et futurs.</p>
+                                        <h3 class="title">Maîtrise d'œuvre</h3>
+                                        <p>Coordination des intervenants et pilotage du projet de A à Z.</p>
                                     </div>
                                 </div>
                                 <div class="service-details-item">
                                     <div class="icon"><img src="{{ asset('storage/template/assets/img/icon/service-details-3.png') }}" alt="service"></div>
                                     <div class="content">
-                                        <h3 class="title">Technologie intelligente</h3>
-                                        <p>Intégration des solutions domotiques et connectées.</p>
+                                        <h3 class="title">Suivi de chantier</h3>
+                                        <p>Contrôle de conformité, qualité d'exécution et respect des délais.</p>
                                     </div>
                                 </div>
                                 <div class="service-details-item">
                                     <div class="icon"><img src="{{ asset('storage/template/assets/img/icon/service-details-4.png') }}" alt="service"></div>
                                     <div class="content">
-                                        <h3 class="title">Efficacité des coûts</h3>
-                                        <p>Un rapport qualité-prix optimal sur chaque projet.</p>
+                                        <h3 class="title">Optimisation des coûts</h3>
+                                        <p>Anticipation des contraintes pour maîtriser le budget dès la conception.</p>
                                     </div>
                                 </div>
                             </div>
@@ -203,25 +200,25 @@
                             </div>
 
                             <h2 class="details-title">Notre approche</h2>
-                            <p>Chez CT ConstruTech, chaque projet est une opportunité de créer un espace unique qui reflète la personnalité et les besoins de nos clients. Notre équipe d'experts combine créativité, précision technique et matériaux de haute qualité pour garantir des résultats exceptionnels.</p>
+                            <p>Chez CT ConstruTech, chaque projet est étudié dans sa globalité afin d'anticiper les contraintes techniques, optimiser les coûts et assurer une exécution conforme aux exigences. Notre équipe combine conception architecturale, calcul structurel et contrôle terrain pour livrer des ouvrages fiables et durables.</p>
 
                             <h2 class="details-title">Nos engagements</h2>
                             <div class="service-details-list-wrap">
                                 <ul>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Services de design haut de gamme</li>
+                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Études structurelles rigoureuses</li>
                                     <li><i class="fa-sharp fa-solid fa-circle-check"></i>Livraison dans les délais convenus</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Maîtrise technique et créative</li>
+                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Maîtrise technique à chaque étape</li>
                                     <li><i class="fa-sharp fa-solid fa-circle-check"></i>Accompagnement personnalisé</li>
                                 </ul>
                                 <ul>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Adaptation à toute structure</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Service client réactif</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Ingénieurs et designers expérimentés</li>
-                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Garantie de satisfaction</li>
+                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Coordination de tous les intervenants</li>
+                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Contrôle qualité sur le terrain</li>
+                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Ingénieurs et architectes expérimentés</li>
+                                    <li><i class="fa-sharp fa-solid fa-circle-check"></i>Transparence et suivi continu</li>
                                 </ul>
                             </div>
 
-                            <p class="mb-50">CT ConstruTech est engagé dans l'excellence — de la conception à la réalisation. Faites confiance à notre expertise pour transformer vos espaces en œuvres d'art habitables.</p>
+                            <p class="mb-50">CT ConstruTech s'engage dans chaque mission avec une exigence d'excellence technique. De la phase d'étude jusqu'au contrôle final sur chantier, nous veillons à ce que chaque ouvrage soit réalisé dans les règles de l'art.</p>
 
                             {{-- FAQ --}}
                             <div class="service-faq">
@@ -236,7 +233,7 @@
                                             </h2>
                                             <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#serviceFaq">
                                                 <div class="accordion-body">
-                                                    Nos services couvrent toute la chaîne du design intérieur et architectural : du concept initial à la livraison finale. Design résidentiel, commercial, consultation, rénovation et visualisation 3D.
+                                                    Nos services couvrent toute la chaîne du projet de construction : études techniques, conception architecturale, maîtrise d'œuvre, suivi de chantier et coordination des intervenants.
                                                 </div>
                                             </div>
                                         </div>
@@ -248,7 +245,7 @@
                                             </h2>
                                             <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
                                                 <div class="accordion-body">
-                                                    Nous commençons par une consultation approfondie, proposons des concepts visuels, affinons le design en collaboration avec vous, puis supervisons la réalisation jusqu'à la livraison finale.
+                                                    Nous commençons par analyser votre besoin et les contraintes du projet, développons les études techniques, coordonnons les intervenants, puis assurons le suivi et le contrôle de l'exécution sur le terrain.
                                                 </div>
                                             </div>
                                         </div>
@@ -260,7 +257,7 @@
                                             </h2>
                                             <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#serviceFaq">
                                                 <div class="accordion-body">
-                                                    Absolument. Chaque projet est unique — design, budget et contraintes d'espace sont pris en compte dès le départ pour un résultat qui vous ressemble.
+                                                    Oui. Chaque projet est traité selon ses propres contraintes techniques, son budget et ses exigences spécifiques. Nous adaptons notre approche à chaque contexte pour garantir un résultat conforme à vos attentes.
                                                 </div>
                                             </div>
                                         </div>

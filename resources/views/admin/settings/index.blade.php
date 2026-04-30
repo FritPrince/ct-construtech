@@ -71,21 +71,9 @@
             </div>
 
             <div class="row g-3 mb-3">
-                <div class="col-md-3">
-                    <label class="ct-form-label">Facebook URL</label>
-                    <input type="text" name="settings[facebook_url]" class="ct-form-control" value="{{ old('settings.facebook_url', $settings['facebook_url'] ?? '') }}">
-                </div>
-                <div class="col-md-3">
-                    <label class="ct-form-label">Instagram URL</label>
-                    <input type="text" name="settings[instagram_url]" class="ct-form-control" value="{{ old('settings.instagram_url', $settings['instagram_url'] ?? '') }}">
-                </div>
-                <div class="col-md-3">
-                    <label class="ct-form-label">Twitter URL</label>
-                    <input type="text" name="settings[twitter_url]" class="ct-form-control" value="{{ old('settings.twitter_url', $settings['twitter_url'] ?? '') }}">
-                </div>
-                <div class="col-md-3">
-                    <label class="ct-form-label">YouTube URL</label>
-                    <input type="text" name="settings[youtube_url]" class="ct-form-control" value="{{ old('settings.youtube_url', $settings['youtube_url'] ?? '') }}">
+                <div class="col-md-6">
+                    <label class="ct-form-label">LinkedIn URL</label>
+                    <input type="text" name="settings[linkedin_url]" class="ct-form-control" placeholder="https://linkedin.com/company/..." value="{{ old('settings.linkedin_url', $settings['linkedin_url'] ?? '') }}">
                 </div>
             </div>
 

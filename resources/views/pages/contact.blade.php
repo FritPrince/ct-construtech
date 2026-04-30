@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contactez-nous — CT ConstruTech')
-@section('meta_description', 'Contactez CT ConstruTech pour vos projets de construction, rénovation ou pour vous inscrire à une formation. Notre équipe vous répond rapidement.')
+@section('meta_description', 'Contactez CT ConstruTech pour discuter de votre projet de construction ou vous inscrire à une formation. Notre équipe est disponible pour vous accompagner.')
 @section('canonical', route('contact'))
 
 @section('content')
@@ -20,7 +20,6 @@
 
         @php
             $cs = \App\Models\CompanySetting::pluck('value', 'key');
-            $ctPhone   = $cs['phone']   ?? null;
             $ctEmail   = $cs['email']   ?? null;
             $ctAddress = $cs['address'] ?? null;
             $mapsUrl   = $cs['google_maps_embed_url'] ?? null;
@@ -51,11 +50,10 @@
                                     <p>{{ $ctAddress }}</p>
                                 </div>
                                 @endif
-                                @if($ctPhone || $ctEmail)
+                                @if($ctEmail)
                                 <div class="request-item white-content">
                                     <span>Support</span>
-                                    @if($ctPhone)<a href="tel:{{ $ctPhone }}">{{ $ctPhone }}</a>@endif
-                                    @if($ctEmail)<a href="mailto:{{ $ctEmail }}">{{ $ctEmail }}</a>@endif
+                                    <a href="mailto:{{ $ctEmail }}">{{ $ctEmail }}</a>
                                 </div>
                                 @endif
                             </div>
